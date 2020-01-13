@@ -12,7 +12,12 @@ class Backer
   end
 
   def backed_projects
-    ProjectBacker.all.select { |pb| pb.project == self}
+    projects_backed = []
+    ProjectBacker.all.each do |project|
+      if project.backer == self
+        projects_backed << project.project
+      end
+    end
   end
 
 
