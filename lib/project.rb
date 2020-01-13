@@ -5,10 +5,15 @@ class Project
   def initialize(title)
     @title = title
   end
- 
+
   def add_backer(backer)
     ProjectBacker.new(self, backer)
   end
+
+  def backers
+    backers_projects = []
+    ProjectBacker.all.each do |backer|
+      if backer.project == self
 
 
 
