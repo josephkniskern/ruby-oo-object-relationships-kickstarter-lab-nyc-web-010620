@@ -18,6 +18,7 @@ class Backer
         projects_backed << project.project
       end
     end
+    projects_backed
   end
 
 
