@@ -2,7 +2,7 @@ class Backer
 
   attr_reader :name
 
- 
+
   def initialize(name)
     @name = name
   end
@@ -12,7 +12,7 @@ class Backer
   end
 
   def backed_projects
-    ProjectBacker.all.select { |pb| pb.backer == self}
+    ProjectBacker.all.select { |pb| pb.projects == self}
   end
 
 
