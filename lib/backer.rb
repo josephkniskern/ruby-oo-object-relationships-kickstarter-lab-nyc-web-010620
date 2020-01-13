@@ -12,7 +12,7 @@ class Backer
   end
 
   def backed_projects
-    ProjectBacker.all.select { |pb| pb.projects == self}
+    ProjectBacker.all.select { |pb| pb.project == self}
   end
 
 
