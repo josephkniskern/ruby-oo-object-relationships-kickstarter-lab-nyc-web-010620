@@ -15,6 +15,7 @@ class Project
     ProjectBacker.all.each do |backer|
       if backer.project == self
         backers_projects << backer.backer
+      end
 
 
 
